@@ -2,7 +2,7 @@
 
 //Configuration information section
 
-$rapidApiKey  = "36b2f13aeemsh5381098411c5e19p12dd42jsnbb0bff1d4e7b";
+$rapidApiKey  = "fbdfcb8503msh8f212d27609d38ap1c399fjsn13eb74dadba1";
 $rapidApiHost = "booking-com.p.rapidapi.com";
 
 $checkinDate  = "2026-01-31";
