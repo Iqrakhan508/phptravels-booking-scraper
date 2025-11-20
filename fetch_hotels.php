@@ -82,11 +82,8 @@ if (!isset($data["result"]) || !is_array($data["result"])) {
     exit;
 }
 
-//Building hotel data as per required structure
+// Safely fetches nested array values without triggering notices.
 
-/**
- * Safely fetches nested array values without triggering notices.
- */
 function getNestedValue(array $source, array $keys, mixed $default = null): mixed
 {
     $value = $source;
@@ -101,6 +98,8 @@ function getNestedValue(array $source, array $keys, mixed $default = null): mixe
 
     return $value;
 }
+
+//Building hotel data as per required structure
 
 $hotelData = [];
 
@@ -180,4 +179,4 @@ foreach ($data["result"] as $hotel) {
 //Output JSON response
 
 header("Content-Type: application/json");
-  echo json_encode($hotelData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+echo json_encode($hotelData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
